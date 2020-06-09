@@ -1,0 +1,73 @@
+﻿@model IEnumerable<BikeStore.Models.Bikes>
+@{
+    //  ViewBag.Title = "Admin";
+    Layout = "/Views/MasterView.cshtml";
+
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<body class="page">
+
+    <!--BEGIN CONTENT-->
+    <div id="content">
+
+       
+
+        <div class="content">
+
+            <div id="login_form">
+                <form method="get" action="@Url.Action("Add","Admin")">
+                    <input type="submit" value="Добавить" class="btn_login" />
+                </form>
+            </div>
+
+            <div class="main_catalog">
+                <ul class="catalog_table">
+
+                    @foreach (var item in Model)
+                    {
+                        <li>
+               
+                            <a href="@Url.Action("Edit","Admin", new {bikeName=item.Id})" class="thumb"><img src="@item.Preview" alt="" wight="100" height="100" /></a>
+                            <div class="catalog_desc">
+                                <div class="title_box">
+                                    <h4><a href="@Url.Action("Edit","Admin", new {bikeName=item.Id})">@item.Manufacturer</a></h4>
+                                    <div class="price">@item.Price $</div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="grey_area">
+                                    <span>@item.Description</span>
+                                </div>
+                            </div>
+
+                            <div class="text-right">
+                             
+                                @using (Html.BeginForm("Delete","Admin"))
+                                {
+                                  
+                                    @Html.Hidden("bikeid", item.Id)
+                                    <input type="submit" class="btn btn-default btn-xs" value="Удалить" />
+                                }
+
+                            </div>
+
+                        </li>
+                    }
+                   
+                </ul>
+            </div>
+            <div id="login_form">
+                <form method="get" action="@Url.Action("Add","Admin")">
+                    <input type="submit" value="Добавить" class="btn_login" />
+                </form>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!--EOF CONTENT-->
+
+</body>
+</html>
+

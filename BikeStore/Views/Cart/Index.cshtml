@@ -1,0 +1,66 @@
+﻿@model  BikeStore.Models.CartIndexViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/MasterView.cshtml";
+    //Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="breadcrumbs">
+    <a href="@Url.Action("Index","Home")">Главная</a>
+    <img src="~/Content/images/marker_2.gif" alt="" />
+    <span>Корзина</span>
+</div>
+<h2>Ваша корзина</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Велосипед</th>
+            <th>Кол-во</th>
+            <th class="text-right">Цена</th>
+            <th class="text-right">Общая цена</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model.Cart.Lines)
+        {
+            <tr>
+                <td class="text-center">
+                    <div class="main_catalog">
+                        <ul class="catalog_table">
+                            <li>
+                                <a href="@Url.Action("BikePage","Home", new {item_id=line.Product.Id})" class="thumb"><img src="@line.Product.Preview" alt="" wight="100" height="100" /></a>
+                                <div class="catalog_desc">
+                                    <div class="title_box">
+                                        <h4><a href="@Url.Action("BikePage","Home", new {item_id=line.Product.Id})">@line.Product.Manufacturer</a></h4>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="grey_area">
+                                        <span>@line.Product.Description</span>
+                                    </div>
+                                    @using (Html.BeginForm("RemoveFromCart", "Cart", new { productId = line.Product.Id }))
+                                    {
+                                        <input name="Id" type="submit" class="fa fa-close" value="Удалить" />
+                                    }
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+
+                </td>
+                <td class="text-left">@line.Quantity</td>
+                <td class="text-right price">@line.Product.Price $</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Итого:</td>
+            <td class="text-right price">@Model.Cart.ComputeTotalValue() $</td>
+        </tr>
+    </tfoot>
+</table>
+@using (Html.BeginForm("OrderView", "Cart"))
+{
+    <input name="Id" type="submit" class="button button-add-cart" value="Оформить заказ" />
+}

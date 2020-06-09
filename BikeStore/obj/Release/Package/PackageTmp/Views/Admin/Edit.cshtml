@@ -1,0 +1,54 @@
+﻿@model BikeStore.Models.Bikes
+
+@{
+    ViewBag.Title = "Edit";
+
+}
+@*<head>
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+</head>*@
+<div class="panel">
+    <div class="panel-heading">
+    <div>
+        <h2>Редактирование велосипеда "@Model.Manufacturer"</h2>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        <div class="panel-body">
+         @Html.HiddenFor(m => m.Id)
+        @foreach (var bikes in ViewData.ModelMetadata.Properties)
+        {
+            if(bikes.PropertyName != "Id")
+            {
+                <div class="form-group">
+                    <label>@(bikes.DisplayName ?? bikes.PropertyName)</label>
+                    @if (bikes.PropertyName == "Description")
+                    {
+                        @Html.TextArea(bikes.PropertyName, null, new {@class = " form-control" , rows=5 })
+                    }
+                    else
+                    {
+                        @Html.TextBox(bikes.PropertyName, null, new { @class = " form-control"})
+                    }
+
+                
+                </div>
+            }
+        }
+
+        </div>
+
+
+
+
+            <div class="panel-footer">
+                
+                   <input type="submit" value="Сохранить" class="btn btn-primary"/>
+              
+                    @Html.ActionLink("Назад", "Index", null, new { @class="bnt bnt-default"})  
+                
+            </div>
+    }
+       </div>
+</div>

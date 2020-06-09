@@ -1,0 +1,233 @@
+﻿@model IEnumerable<BikeStore.Models.Bikes>
+@{
+    Layout = "~/Views/MasterView.cshtml";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body class="page">
+
+    <!--BEGIN CONTENT-->
+    <div id="content">
+        <div class="content">
+            <div class="breadcrumbs">
+                <a href="@Url.Action("Index","Home")">Главная</a>
+                <img src="~/Content/images/marker_2.gif" alt="" />
+                <span>Каталог</span>
+            </div>
+            <div class="main_wrapper">
+
+                <h1><strong>Каталог</strong> велосипедов</h1>
+                <div class="catalog_sidebar">
+                    <div class="search_auto">
+                        <h4><strong>Поиск</strong> велосипеда</h4>
+
+                        <div class="clear"></div>
+
+
+                        <form action="@Url.Action("Catalog","Home")" method="post">
+                            <label><strong>Производитель:</strong></label>
+                            <div class="select_box_1">
+                                <select class="select_1" name="Manufacturer">
+                                    <option value="">Выберите марку</option>
+                                    <option value="Kross">Kross</option>
+                                    <option value="Cube">Cube</option>
+                                    <option value="Merida">Merida</option>
+                                    <option value="GT">GT</option>
+                                    <option value="LTD">LTD</option>
+                                    <option value="Stels">Stels</option>
+                                    <option value="Format">Format</option>
+                                    <option value="Trek">Trek</option>
+                                </select>
+                                <div class="clear"></div>
+                            </div>
+
+                            <label><strong>Тип:</strong></label>
+                            <div class="select_box_1">
+                                <select class="select_1" name="Type">
+                                    <option value="">Выберите тип</option>
+                                    <option value="Cross-country">Cross-country</option>
+                                    <option value="Highway">Highway</option>
+                                    <option value="Fat bike">Fat bike</option>
+                                    <option value="Urban">Urban</option>
+                                    <option value="Trial/Freestyle">Trial/Freestyle</option>
+                                    <option value="Downhill">Downhill</option>
+                                    <option value="Cyclocross">Cyclocross</option>
+                                </select>
+                                <div class="clear"></div>
+                            </div>
+                            <label><strong>Год выпуска:</strong></label>
+                            <div class="select_box_1">
+                                <div style="display:inline-block;width:88px;">
+                                    <select class="select_1" name="from_year">
+                                        <option value="">от</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                    </select>
+                                </div>
+                                <div style="display:inline-block;width:88px;">
+                                    <select class="select_1" name="to_year">
+                                        <option value="">до</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <label><strong>Трансмиссия:</strong></label>
+                                <div class="select_box_1">
+                                    <div style="display:inline-block;width:88px;">
+                                        <select class="select_1" name="from_transmission">
+                                            <option value="">от</option>
+                                            <option value="11">11</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="27">27</option>
+                                            <option value="30">30</option>
+                                        </select>
+                                    </div>
+                                    <div style="display:inline-block;width:88px;">
+                                        <select class="select_1" name="to_transmission">
+                                            <option value="">до</option>
+                                            <option value="11">11</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="27">27</option>
+                                            <option value="30">30</option>
+                                        </select>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <label><strong>Размер колес:</strong></label>
+                                <div class="select_box_1">
+                                    <div style="display:inline-block;width:88px;">
+                                        <select class="select_1" name="from_wheels">
+                                            <option value="">от</option>
+                                            <option value="26">26</option>
+                                            <option value="27,5">27,5</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                        </select>
+                                    </div>
+                                    <div style="display:inline-block;width:88px;">
+                                        <select class="select_1" name="to_wheels">
+                                            <option value="">до</option>
+                                            <option value="26">26</option>
+                                            <option value="27,5">27,5</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                        </select>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <label><strong>Вес:</strong></label>
+                                <div class="select_box_1">
+                                    <div style="display:inline-block;width:88px;">
+                                        <select class="select_1" name="from_weight">
+                                            <option value="">от</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                        </select>
+                                    </div>
+                                    <div style="display:inline-block;width:88px;">
+                                        <select class="select_1" name="to_weight">
+                                            <option value="">до</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                        </select>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <label><strong>Цена:</strong></label>
+                                <div class="select_box_1">
+                                    <div style="display:inline-block;width:88px;">
+                                        <select class="select_1" name="from_price">
+                                            <option value="">от</option>
+                                            <option value="2000">2000$</option>
+                                            <option value="1500">1500$</option>
+                                            <option value="1300">1300$</option>
+                                            <option value="1100">1100$</option>
+                                            <option value="1000">1000$</option>
+                                            <option value="700">700$</option>
+                                            <option value="600">600$</option>
+                                            <option value="500">500$</option>
+                                            <option value="300">300$</option>
+                                        </select>
+                                    </div>
+                                    <div style="display:inline-block;width:88px;">
+                                        <select class="select_1" name="to_price">
+                                            <option value="">до</option>
+                                            <option value="2000">2000$</option>
+                                            <option value="1500">1500$</option>
+                                            <option value="1300">1300$</option>
+                                            <option value="1100">1100$</option>
+                                            <option value="1000">1000$</option>
+                                            <option value="700">700$</option>
+                                            <option value="600">600$</option>
+                                            <option value="500">500$</option>
+                                            <option value="300">300$</option>
+                                        </select>
+                                    </div>
+                                    <div class="clear"></div>
+                            </div>
+                            <input type="submit" value="Search" class="btn_search" />
+                        </form>
+                       </div>
+                    </div>
+                </div>
+
+                <div class="main_catalog">
+                    <ul class="catalog_table">
+
+                        @foreach (var item in Model)
+                        {
+                        <li>
+                            <a href="@Url.Action("BikePage","Home", new {item_id=item.Id})" class="thumb"><img src="@item.Preview" alt="" wight="100" height="100" /></a>
+                            <div class="catalog_desc">
+                                <div class="title_box">
+                                    <h4><a href="@Url.Action("BikePage","Home", new {item_id=item.Id})">@item.Manufacturer (@item.Year)</a></h4>
+                                    <div class="price">@item.Price $</div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="grey_area">
+                                    <span>@item.Description</span>
+                                </div>
+                            </div>
+                            @using (Html.BeginForm("AddToCart", "Cart", new { productId = item.Id }))
+                            {
+                                <input id="cart" type="submit" onclick="inCart()" value="Добавить в корзину" />
+                            }
+                        </li>
+                            }
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!--EOF CONTENT-->
+
+</body>
+</html>
+

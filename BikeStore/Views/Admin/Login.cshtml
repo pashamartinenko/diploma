@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/MasterView.cshtml";
+
+}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script language="javascript" type="text/javascript">
+        function btnSubmit_onclick() {
+            // Если что-то забыто, выводим окно сообщения
+            var btnpas = document.getElementById("txtPassword").value;
+            var btnuser = document.getElementById("txtUserName").value;
+            if ((btnuser == "") || (btnpas == ""))
+            {
+                alert("Вы должны ввести имя пользователя и пароль");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body bgcolor="#0066ff">
+    <center>
+
+        <h1> Регистрационная страница </h1> <br />
+        <h3>
+            Пожалуйста, введите имя пользователя и пароль:
+        </h3><br />
+             <form name="FirstForm" id="FirstForm">
+                 @using (Html.BeginForm("Login", "Admin"))
+                 {
+ <style>
+.wrapper {
+  background-color: whitesmoke;
+  list-style-type: none;
+  padding: 0;
+  border-radius: 3px;
+}
+.form-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: .5em;
+}
+.form-row > label {
+  padding: .5em 1em .5em 0;
+  flex: 1;
+}
+.form-row > input {
+  flex: 2;
+}
+.form-row > input,
+.form-row > button {
+  padding: .5em;
+}
+.form-row > button {
+  background: gray;
+  color: white;
+  border: 0;
+}
+
+                     </style>
+                     <form>
+                         <ul class="wrapper">
+                             <li class="form-row">
+                                 <label for="name">Имя пользователя:</label>
+                                 <input id="txtUserName" name="txtUserName" type="text" />
+                             </li>
+                             <li class="form-row">
+                                 <label for="townborn">Пароль:</label>
+                                 <input id="txtPassword" name="txtPassword" type="password" />
+                             </li>                     
+                             <input id="btnSubmit" name="btnSubmit"
+                                    type="submit" value="Войти" onclick="btnSubmit_onclick()" />
+                             <input  name="btnReset" type="submit" value="Сброс" />                          
+                         </ul>
+                     </form>
+                 }
+             </form>
+       
+    </center>
+</body>
+</html>

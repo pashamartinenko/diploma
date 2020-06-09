@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewBag.Title = "MasterView";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <!-- Facebook APP ID -->
+    <meta property="fb:app_id" content="12345" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Auto Dealer HTML" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:url" content="http://localhost/01_index.html" />
+    <meta property="og:image" content="http://cdn.winterjuice.com/example/autodealer/image.jpg" />
+    <meta property="og:description" content="Auto Dealer HTML - Responsive HTML Auto Dealer Template" />
+
+    <!-- Page Title -->
+    <title>BIKESSTORE</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/style980.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/style800.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/style700.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/style600.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/style500.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/style400.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/jquery.fancybox-1.3.4.css" media="screen" />
+    <script type="text/javascript" src="../Content/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.selectik.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.countdown.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.checkbox.js"></script>
+    <script type="text/javascript" src="../Content/js/js.js"></script>
+</head>
+<body class="page">
+    <!--BEGIN HEADER-->
+    <div id="header">
+        <div class="top_info">
+            <div class="logo">
+                <a href="#">BIKES<span>STORE</span></a>
+            </div>
+            <div class="header_contacts">
+                <div class="phone">+7 953 168 77 88</div>
+                <div>Санкт-Петербург, ул. Торжковская 15 10:00–20:00</div>
+            </div>
+            <div class="socials">
+                <a href="#"><img src="/Content/images/fb_icon.png" alt=""></a>
+                <a href="#"><img src="/Content/images/twitter_icon.png" alt=""></a>
+                <a href="#"><img src="/Content/images/in_icon.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="bg_navigation">
+        <div class="navigation_wrapper">
+            <div id="navigation">
+                <span>Home</span>
+                <ul>
+                    <li><a href="@Url.Action("Index","Home")">Главная</a></li>
+                    <li><a href="@Url.Action("Contact","Home")">Контакты</a></li>
+                    <li><a href="@Url.Action("Catalog","Home")">Каталог</a></li>
+                    <li><a href="@Url.Action("Index","Cart")">Корзина</a></li>
+                </ul>
+            </div>
+            <div id="login_form">
+                <form method="get" action="@Url.Action("Login","Admin")">
+                    <input type="submit" value="Войти" class="btn_login" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--EOF HEADER-->
+    <!--BEGIN CONTENT-->
+    <div id="content">
+        @RenderBody()
+    </div>
+    <!--EOF CONTENT-->
+    <!--BEGIN FOOTER-->
+    <div id="footer">
+        <div class="bg_top_footer">
+            <div class="top_footer">
+                <div class="f_widget first">
+                    <h3><strong>О Магазине</strong></h3>
+                    <a href="#" class="footer_logo">BIKESSTORE</a>
+                    <p>
+                        Розничный интернет-магазин продажи велосипедов
+                    </p>
+                </div>
+                <div class="f_widget divide second">
+                    <h3><strong>Время</strong> работы</h3>
+                    <ul class="schedule">
+                        <li>
+                            <strong>Понедельник</strong>
+                            <span>10:00 - 20:00 </span>
+                        </li>
+                        <li>
+                            <strong>Вторник</strong>
+                            <span>10:00 - 20:00 </span>
+                        </li>
+                        <li>
+                            <strong>Среда</strong>
+                            <span>10:00 - 20:00 </span>
+                        </li>
+                        <li>
+                            <strong>Четверг</strong>
+                            <span>10:00 - 20:00</span>
+                        </li>
+                        <li>
+                            <strong>Пятница</strong>
+                            <span>10:00 - 20:00</span>
+                        </li>
+                        <li>
+                            <strong>Суббота</strong>
+                            <span>10:00 - 20:00</span>
+                        </li>
+                        <li>
+                            <strong>Воскресенье</strong>
+                            <span>Выходной</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fwidget_separator"></div>
+                <div class="f_widget third">
+                    <h3><strong>Наши</strong> контакты</h3>
+                    <div class="f_contact f_contact_1"><strong>Адрес:<br /></strong>Санкт-Петербург, ул.Торжковская 15</div>
+                    <div class="f_contact f_contact_2"><strong>Телефон:</strong> +7 953 168 77 88 <br /></div>
+                    <div class="f_contact f_contact_3"><strong>Email:</strong> <a href="mailto:#">martipash@gmail.com</a></div>
+                </div>
+                <div class="f_widget divide last frame_wrapper">
+                    <iframe width="204" height="219" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1995.438788057299!2d30.3167426160917!3d59.99121728189531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469633f7b288dd27%3A0x9d1831beadf66e56!2z0KLQvtGA0LbQutC-0LLRgdC60LDRjyDRg9C7LiwgMTUsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5NzM0Mw!5e0!3m2!1sru!2sby!4v1590750151513!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright_wrapper">
+            <div class="copyright">&copy;2020 by Martinenko Pavel. All Rights Reserved.</div>
+        </div>
+    </div>
+    <!--EOF FOOTER-->
+</body>
+</html>

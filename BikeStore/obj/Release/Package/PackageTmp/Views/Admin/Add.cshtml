@@ -1,0 +1,85 @@
+﻿@model BikeStore.Models.Bikes
+
+@{
+    ViewBag.Title = "Add";
+
+}
+@*<head>
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+</head>*@
+@*<div class="panel">
+    <div class="panel-heading">
+
+        <h2>Добавление велосипеда</h2>
+        <div class="panel-body">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.Manufacturer, "Название")
+                    <br />
+                    @Html.EditorFor(model => model.Manufacturer)
+                    <br /><br />
+                    @Html.LabelFor(model => model.Type, "Тип")
+                    <br />
+                    @Html.EditorFor(model => model.Type)
+                    <br /><br />
+                    @Html.LabelFor(model => model.Price, "Цена")
+                    <br />
+                    @Html.EditorFor(model => model.Price)
+                    <br /><br />
+                </div>
+                <input type="submit" value="Добавить" />
+            }
+        </div>
+
+
+    </div>
+</div>*@
+
+
+    <div class="panel">
+        <div class="panel-heading">
+            <div>
+                <h2>Добавление велосипеда @*"@Model.Manufacturer"*@</h2>
+            </div>
+
+            @using (Html.BeginForm())
+            {
+              
+                <div class="panel-body">
+                    @Html.HiddenFor(m => m.Id)
+                    @foreach (var bikes in ViewData.ModelMetadata.Properties)
+                    {
+                        if (bikes.PropertyName != "Id")
+                        {
+                            <div class="form-group">
+                                <label>@(bikes.DisplayName ?? bikes.PropertyName)</label>
+                                @if (bikes.PropertyName == "Description")
+                                {
+                                    @Html.TextArea(bikes.PropertyName, null, new { @class = " form-control", rows = 5 })
+                                }
+                                else
+                                {
+                                    @Html.TextBox(bikes.PropertyName, null, new { @class = " form-control" })
+                                }
+                              
+                            </div>     
+                                         
+                        }
+                    }
+                   
+                   
+                </div>
+
+
+                                    <div class="panel-footer">
+
+                                        <input type="submit" value="Добавить" class="btn btn-primary" />
+
+                                        @Html.ActionLink("Назад", "Index", null, new { @class = "bnt bnt-default" })
+
+                                    </div>
+            }
+        </div>
+    </div>

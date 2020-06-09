@@ -1,0 +1,190 @@
+﻿
+@{
+    ViewBag.Title = "MasterView";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Facebook APP ID -->
+    <meta property="fb:app_id" content="12345" />
+
+    <meta name="keywords" content="Car-Dealer, auto-salon, automobile, business, car, car-gallery, car-selling-template, cars, dealer, marketplace, mobile, real estate, responsive, sell, vehicle" />
+    <meta name="description" content="Auto Dealer HTML - Responsive HTML Auto Dealer Template" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Auto Dealer HTML" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:url" content="http://localhost/01_index.html" />
+    <meta property="og:image" content="http://cdn.winterjuice.com/example/autodealer/image.jpg" />
+    <meta property="og:description" content="Auto Dealer HTML - Responsive HTML Auto Dealer Template" />
+
+    <!-- Page Title -->
+    <title>BIKESSTORE</title>
+    <link rel="stylesheet" type="text/css" href="../Content/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/style980.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/style800.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/style700.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/style600.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/style500.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/style400.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/css/jquery.fancybox-1.3.4.css" media="screen" />
+    <!--[if IE]>
+    <link href="css/style_ie.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <script type="text/javascript" src="../Content/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.selectik.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.countdown.js"></script>
+    <script type="text/javascript" src="../Content/js/jquery.checkbox.js"></script>
+    <script type="text/javascript" src="../Content/js/js.js"></script>
+</head>
+<body class="page">
+    <!--BEGIN HEADER-->
+    <div id="header">
+        <div class="top_info">
+            <div class="logo">
+                <a href="#">BIKES<span>STORE</span></a>
+            </div>
+            <div class="header_contacts">
+                <div class="phone">8 0(29) 166-88-99</div>
+                <div>ул. Кирова 23, Минск , 10:00–20:00</div>
+            </div>
+            <div class="socials">
+                <a href="#"><img src="/Content/images/fb_icon.png" alt=""></a>
+                <a href="#"><img src="/Content/images/twitter_icon.png" alt=""></a>
+                <a href="#"><img src="/Content/images/in_icon.png" alt=""></a>
+            </div>
+        </div>
+        @*<div class="bg_navigation">
+            <div class="navigation_wrapper">
+                <div id="navigation">
+                    <span>Home</span>
+                    <ul>
+                        <li class="current"><a href="#">Home</a></li>
+
+
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Catalog</a></li>
+                    </ul>
+                </div>
+                <div id="login_form">
+                    <form method="get" action="#">
+                        <input type="submit" value="Login in" class="btn_login" />
+                    </form>
+                </div>
+            </div>
+        </div>*@
+    </div>
+    <!--EOF HEADER-->
+    <!--BEGIN CONTENT-->
+    <div id="content">
+     @RenderBody()
+    </div>
+    <!--EOF CONTENT-->
+    <!--BEGIN FOOTER-->
+    <div id="footer">
+        <div class="bg_top_footer">
+            <div class="top_footer">
+                <div class="f_widget first">
+                    <h3><strong>О Магазине</strong></h3>
+                    <a href="#" class="footer_logo">BIKESSTORE</a>
+                    <p>
+                       Здесь написать что-нибудь о магазине.
+                    </p>
+                </div>
+                <div class="f_widget divide second">
+                    <h3><strong>Время</strong> работы</h3>
+                    <ul class="schedule">
+                        <li>
+                            <strong>Понедельник</strong>
+                            <span>10:00 - 20:00 </span>
+                        </li>
+                        <li>
+                            <strong>Вторник</strong>
+                            <span>10:00 - 20:00 </span>
+                        </li>
+                        <li>
+                            <strong>Среда</strong>
+                            <span>10:00 - 20:00 </span>
+                        </li>
+                        <li>
+                            <strong>Четверг</strong>
+                            <span>10:00 - 20:00</span>
+                        </li>
+                        <li>
+                            <strong>Пятница</strong>
+                            <span>10:00 - 20:00</span>
+                        </li>
+                        <li>
+                            <strong>Суббота</strong>
+                            <span>10:00 - 20:00</span>
+                        </li>
+                        <li>
+                            <strong>Воскресенье</strong>
+                            <span>Выходной</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fwidget_separator"></div>
+                <div class="f_widget third">
+                    <h3><strong>Наши</strong> контакты</h3>
+                    <div class="f_contact f_contact_1"><strong>Address Info:<br /></strong>Lorem ipsum Dolor sit amet, 658 Consectetur, Adipisicing 56 D</div>
+                    <div class="f_contact f_contact_2"><strong>Телефон:</strong> 8 0(29) 166-88-99 <br /><strong>FAX:</strong> +1 (234) 567-8902</div>
+                    <div class="f_contact f_contact_3"><strong>Email:</strong> <a href="mailto:#">testmail@sitename.com</a></div>
+                </div>
+                <div class="f_widget divide last frame_wrapper">
+                    <iframe width="204" height="219" src="https://maps.google.com.ua/maps?f=q&amp;source=s_q&amp;hl=ruamp;hl=en&amp;geocode=&amp;q=%D0%9C%D0%B0%D0%BD%D1%85%D1%8D%D1%82%D1%82%D0%B5%D0%BD,+%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%A1%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5+%D0%A8%D1%82%D0%B0%D1%82%D1%8B+%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B8&amp;aq=0&amp;oq=%D0%BC%D0%B0%D0%BD%D1%85&amp;sll=48.382803,31.17461&amp;sspn=7.573826,21.643066&amp;ie=UTF8&amp;hq=&amp;hnear=%D0%9C%D0%B0%D0%BD%D1%85%D1%8D%D1%82%D1%82%D0%B5%D0%BD,+%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%9D%D1%8C%D1%8E+%D0%99%D0%BE%D1%80%D0%BA,+%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%A1%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D1%91%D0%BD%D0%BD%D1%8B%D0%B5+%D0%A8%D1%82%D0%B0%D1%82%D1%8B+%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B8&amp;t=m&amp;ll=40.79042,-73.959961&amp;spn=0.113849,0.139389&amp;z=11&amp;iwloc=A&amp;output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+        @*<div class="bottom_footer">
+            <div class="f_widget ">
+                <h3><strong>About</strong> us</h3>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Our Partners</a></li>
+                    <li><a href="#">Advertising Online</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="f_widget divide">
+                <h3><strong>Need</strong> help?</h3>
+                <ul>
+                    <li><a href="#">How do I add an offer?</a></li>
+                    <li><a href="#">How do I find a vehicle</a></li>
+                    <li><a href="#">Price list</a></li>
+                    <li><a href="#">Office for car dealers</a></li>
+                </ul>
+            </div>
+            <div class="fwidget_separator"></div>
+            <div class="f_widget">
+                <h3><strong>User</strong> area</h3>
+                <ul>
+                    <li><a href="#">Add an offer</a></li>
+                    <li><a href="#">Register dealder</a></li>
+                    <li><a href="#">Login Dealer</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </div>
+            <div class="f_widget divide last">
+                <h3><strong>Find</strong> us here</h3>
+                <ul class="horizontal">
+                    <li><a href="#"><img src="/Content/images/fb_icon.png" alt=""></a></li>
+                    <li><a href="#"><img src="/Content/images/twitter_icon.png" alt=""></a></li>
+                    <li><a href="#"><img src="/Content/images/in_icon.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>*@
+        <div class="copyright_wrapper">
+            <div class="copyright">&copy; 2018 By Alexander Govrov. All Rights Reserved.</div>
+        </div>
+    </div>
+    <!--EOF FOOTER-->
+</body>
+</html>

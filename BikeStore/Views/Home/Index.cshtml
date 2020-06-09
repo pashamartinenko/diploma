@@ -1,0 +1,91 @@
+﻿@model   IEnumerable<BikeStore.Models.Bikes>
+@{ 
+    Layout = "~/Views/MasterView.cshtml";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<body class="page">
+
+    <!--BEGIN CONTENT-->
+    <div id="content">
+        <div class="content">
+            <div class="wrapper_1">
+                <div class="slider_wrapper">
+                    <div class="home_slider">
+                        <div class="slider slider_1">
+                            <div class="slide">
+                                <img src="~/Content/images/bikes/krosslvl11.jpeg" alt="" />
+                                <div class="description">
+                                    <h2 class="title">Kross Level 11</h2>
+                                    <p class="desc"><span><strong>Год выпуска: </strong>2018</span><span><strong>Трансмиссия: </strong>22</span></p>
+                                    <div class="price">$ 2000</div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="~/Content/images/bikes/GT Avalanche Comp.jpeg" alt="" />
+                                <div class="description">
+                                    <h2 class="title">GT Karakaram Comp</h2>
+                                    <p class="desc"><span><strong>Год выпуска: </strong>2015</span><span><strong>Трансмиссия: </strong>27</span></p>
+                                    <div class="price">$ 600</div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="~/Content/images/bikes/Stels Navigator 890 D Carbon.jpg" alt="" />
+                                <div class="description">
+                                    <h2 class="title">Stels Navigator 890 D Carbon</h2>
+                                    <p class="desc"><span><strong>Год выпуска: </strong>2016</span><span><strong>Трансмиссия: </strong>30</span></p>
+                                    <div class="price">$ 1100</div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                            
+                                <img src="~/Content/images/bikes/LTD Gravity 990 29.jpeg" alt="" />
+                                <div class="description">
+                                    <h2 class="title">LTD Gravity 990 (29)</h2>
+                                    <p class="desc"><span><strong>Год выпуска: </strong>2018</span><span><strong>Трансмиссия: </strong>20</span></p>
+                                    <div class="price">$ 500</div>
+                                </div>
+                            </div>
+                            <div class="slide">      
+                                                       
+                                <img src="~/Content/images/bikes/Cube Reaction GTC Race 27.5.jpeg" alt="" /> 
+                                <div class="description">
+                                    <h2 class="title">Cube Reaction GTC Race 27.5</h2>
+                                    <p class="desc"><span><strong>Год выпуска: </strong>2017</span><span><strong>Трансмиссия: </strong>22</span></p>
+                                    <div class="price">$ 2000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_auto_wrapper">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="recent">
+                <h2><strong>Последние</strong> объявления</h2>
+                <div class="recent_carousel">
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="slide">
+                            <a href="@Url.Action("BikePage","Home", new {item_id=item.Id})">
+                                <img src="@item.Preview" alt="@item.Manufacturer" />
+                                <div class="description">Тип: @item.Type<br />Год выпуска: @item.Year<br />Трансмиссия: @item.Transmission</div>
+                                <div class="title">@item.Manufacturer <span class="price">@item.Price $</span></div>
+                            </a>
+                        </div>
+                    }                
+                    
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--EOF CONTENT-->
+   
+</body>
+</html>

@@ -1,0 +1,99 @@
+﻿@model BikeStore.Models.Bikes
+@{
+    Layout = "~/Views/MasterView.cshtml";
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<body class="page">
+
+    <!--BEGIN CONTENT-->
+    <div id="content">
+        <div class="content">
+            <div class="breadcrumbs">
+                <a href="@Url.Action("Index","Home")">Главная</a>
+                <img src="~/Content/images/marker_2.gif" alt="" />
+                <a href="#">Bike</a>
+            </div>
+            <div class="main_wrapper">
+                <div class="cars_id">
+
+                </div>
+                <h1><strong>@Model.Manufacturer (@Model.Year)</strong> </h1>
+                <div class="car_image_wrapper car_group">
+                    <div class="big_image">
+                        <a href="@Model.Preview" class="car_group">
+                            <img src="images/zoom.png" alt="" class="zoom" />
+                            <img src="@Model.Preview" alt="" />
+                        </a>
+                    </div>
+
+                </div>
+                <div class="car_characteristics">
+
+                    <div class="price">ЦЕНА @Model.Price $ </div>
+                    <div class="clear"></div>
+                    <div class="features_table">
+                        <div class="line grey_area">
+                            <div class="left">Модель:</div>
+                            <div class="right">@Model.Manufacturer</div>
+                        </div>
+                        <div class="line">
+                            <div class="left">Тип:</div>
+                            <div class="right">@Model.Type</div>
+                        </div>
+                        <div class="line grey_area">
+                            <div class="left">Год выпуска:</div>
+                            <div class="right">@Model.Year</div>
+                        </div>
+
+                        <div class="line ">
+                            <div class="left">Трансмиссия:</div>
+                            <div class="right">@Model.Transmission</div>
+                        </div>
+
+
+                    </div>
+                    <div class="wanted_line">
+                        <div class="left"></div>
+
+                        <div class="right">    
+                          @using (Html.BeginForm("AddToCart", "Cart", new { productId = Model.Id }))
+                          {
+                          <input name="Id" type="submit" class="btn_login" value="Добавить в корзину" />
+                          }
+                          </div>                          
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="info_box">
+                    <div class="car_info">
+                        <div class="info">
+                            <h2><strong>Больше</strong> информации</h2>
+                            <p class="first"><strong>@Model.Description</strong></p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="car_contacts">
+                        <h2>Контакты</h2>
+                      
+                        <div class="left">
+                            <div class="phones detail single_line spaced">+7 953 168 77 88</div>
+                            <div class="email detail single_line"><a href="mailto:#" class="markered">martipash@gmail.com</a></div>
+                        </div>
+                        <div class="right">
+                            <div class="addr detail single_line">Санкт-Петербург, ул. Торжковская 15</div>
+                            <div class="web detail single_line"><a href="#">http://www.velomir.ru</a></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="car_sidebar">
+
+
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>

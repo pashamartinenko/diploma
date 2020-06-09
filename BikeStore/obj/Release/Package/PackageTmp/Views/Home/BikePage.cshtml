@@ -1,0 +1,150 @@
+﻿@model BikeStore.Models.Bikes
+@{
+    Layout = "/Views/MasterView.cshtml";
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<body class="page">
+
+    <!--BEGIN CONTENT-->
+    <div id="content">
+        <div class="bg_navigation">
+            <div class="navigation_wrapper">
+                <div id="navigation">
+                    <span>Home</span>
+                    <ul>
+                        <li><a href="@Url.Action("Index","Home")">Home</a></li> 
+
+                        <li><a href="@Url.Action("Contact","Home")">Contacts</a></li>
+                        <li><a href="@Url.Action("Catalog","Home")">Catalog</a></li>
+                    </ul>
+                </div>
+                <div id="login_form">
+                    <form method="get" action="#">
+                        <input type="submit" value="Login in" class="btn_login" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div class="breadcrumbs">
+                <a href="#">Home</a>
+                <img src="images/marker_2.gif" alt="" />
+                <a href="#">Bike</a>
+
+            </div>
+            <div class="main_wrapper">
+                <div class="cars_id">
+
+                </div>
+                <h1><strong>@Model.Manufacturer</strong> </h1>
+                <div class="car_image_wrapper car_group">
+                    <div class="big_image">
+                        <a href="@Model.Preview" class="car_group">
+                            <img src="images/zoom.png" alt="" class="zoom" />
+                            <img src="@Model.Preview" alt="" />
+                        </a>
+                    </div>
+
+                </div>
+                <div class="car_characteristics">
+
+                    <div class="price">PRICE @Model.Price $ </div>
+                    <div class="clear"></div>
+                    <div class="features_table">
+                        <div class="line grey_area">
+                            <div class="left">Model:</div>
+                            <div class="right">@Model.Manufacturer</div>
+                        </div>
+                        <div class="line">
+                            <div class="left">Type:</div>
+                            <div class="right">@Model.Type</div>
+                        </div>
+                        <div class="line grey_area">
+                            <div class="left">Year:</div>
+                            <div class="right">@Model.Year</div>
+                        </div>
+
+                        <div class="line ">
+                            <div class="left">Transmision:</div>
+                            <div class="right">@Model.Transmission</div>
+                        </div>
+
+
+                    </div>
+                    <div class="wanted_line">
+                        <div class="left"></div>
+                        <div class="right">
+                            <a href="#">add at CARD</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="info_box">
+                    <div class="car_info">
+                        <div class="info">
+                            <h2><strong>More</strong> info</h2>
+                            <p class="first"><strong>@Model.Description</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit aenean aliquet fringilla metus, a ultricies ligula consequa at. Maecenas eget massa at eros ornare rhoncus. In sit a enim risus, in mattis felis a ultricies ligula consequat at. Maecenas eget massa at eros ornare.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet fringilla metus, a ultricies ligula consequa at. Maecenas eget massa at eros ornare rhoncus. In sit a enim risus, in mattis felis</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="car_contacts">
+                        <h2><strong>Contact</strong> details</h2>
+                      
+                        <div class="left">
+                            <div class="phones detail single_line spaced">0040 742 016 756</div>
+                            <div class="email detail single_line"><a href="mailto:#" class="markered">office@velomir.com</a></div>
+                        </div>
+                        <div class="right">
+                            <div class="addr detail single_line">ул. Кирова 23, Минск,	main street</div>
+                            <div class="web detail single_line"><a href="#">http://www.velomir.by</a></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="car_sidebar">
+
+
+                </div>
+                <div class="clear"></div>
+                <!--<div class="recent_cars">
+                    <h2><strong>Similar</strong> offers</h2>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="images/placeholders/220x164.gif" alt=""/>
+                                <div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+                                <div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/placeholders/220x164.gif" alt=""/>
+                                <div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+                                <div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/placeholders/220x164.gif" alt=""/>
+                                <div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+                                <div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
+                            </a>
+                        </li>
+                        <li class="last">
+                            <a href="#">
+                                <img src="images/placeholders/220x164.gif" alt=""/>
+                                <div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+                                <div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,229 @@
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\ApplicationInsights.config
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\roslyn\csc.exe
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\roslyn\System.Collections.Immutable.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\roslyn\System.Reflection.Metadata.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\roslyn\vbc.exe
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\roslyn\VBCSCompiler.exe
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\roslyn\VBCSCompiler.exe.config
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\BikeStore.dll.config
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\BikeStore.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\BikeStore.pdb
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\EntityFramework.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\EntityFramework.SqlServer.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.AI.Agent.Intercept.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.AI.DependencyCollector.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.AI.Web.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.AI.WindowsServer.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.ApplicationInsights.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.Web.Infrastructure.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\System.Web.Helpers.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\System.Web.Mvc.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\System.Web.Razor.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\System.Web.Webpages.Deployment.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\System.Web.Webpages.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\System.Web.Webpages.Razor.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\EntityFramework.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\EntityFramework.SqlServer.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.AI.DependencyCollector.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.AI.Web.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.AI.WindowsServer.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.ApplicationInsights.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\System.Web.Razor.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\System.Web.Webpages.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\System.Web.Webpages.Deployment.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\System.Web.Webpages.Razor.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\System.Web.Helpers.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\System.Web.Mvc.xml
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\ru\System.Web.Razor.resources.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\ru\System.Web.Webpages.resources.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\ru\System.Web.Webpages.Deployment.resources.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\ru\System.Web.Webpages.Razor.resources.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\ru\System.Web.Helpers.resources.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\bin\ru\System.Web.Mvc.resources.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\obj\Release\BikeStore.dll
+D:\WEB APP\bikestore\bikestore\BikeStore\obj\Release\BikeStore.pdb
+D:\WEB APP\bikestore\bikestore\BikeStore\obj\Release\BikeStore.csprojResolveAssemblyReference.cache
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\ApplicationInsights.config
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\roslyn\csc.exe
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\roslyn\System.Collections.Immutable.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\roslyn\System.Reflection.Metadata.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\roslyn\vbc.exe
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\roslyn\VBCSCompiler.exe
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\roslyn\VBCSCompiler.exe.config
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\BikeStore.dll.config
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\BikeStore.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\BikeStore.pdb
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\EntityFramework.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\EntityFramework.SqlServer.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.Agent.Intercept.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.DependencyCollector.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.Web.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.WindowsServer.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.ApplicationInsights.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.Web.Infrastructure.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\System.Web.Helpers.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\System.Web.Mvc.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\System.Web.Razor.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\System.Web.Webpages.Deployment.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\System.Web.Webpages.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\System.Web.Webpages.Razor.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\EntityFramework.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\EntityFramework.SqlServer.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.DependencyCollector.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.Web.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.WindowsServer.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.ApplicationInsights.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\System.Web.Razor.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\System.Web.Webpages.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\System.Web.Webpages.Deployment.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\System.Web.Webpages.Razor.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\System.Web.Helpers.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\System.Web.Mvc.xml
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\ru\System.Web.Razor.resources.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\ru\System.Web.Webpages.resources.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\ru\System.Web.Webpages.Deployment.resources.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\ru\System.Web.Webpages.Razor.resources.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\ru\System.Web.Helpers.resources.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\bin\ru\System.Web.Mvc.resources.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\obj\Release\BikeStore.dll
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\obj\Release\BikeStore.pdb
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\obj\Release\BikeStore.csprojAssemblyReference.cache
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\obj\Release\BikeStore.csproj.CoreCompileInputs.cache
+D:\эл.материалы\5 сем материалы\Кочуров\WEB APP\bikestore\BikeStore\BikeStore\obj\Release\BikeStore.csproj.CopyComplete
+D:\диплом\bikestore\BikeStore\BikeStore\bin\ApplicationInsights.config
+D:\диплом\bikestore\BikeStore\BikeStore\bin\roslyn\csc.exe
+D:\диплом\bikestore\BikeStore\BikeStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\диплом\bikestore\BikeStore\BikeStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\диплом\bikestore\BikeStore\BikeStore\bin\roslyn\System.Collections.Immutable.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\roslyn\System.Reflection.Metadata.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\roslyn\vbc.exe
+D:\диплом\bikestore\BikeStore\BikeStore\bin\roslyn\VBCSCompiler.exe
+D:\диплом\bikestore\BikeStore\BikeStore\bin\roslyn\VBCSCompiler.exe.config
+D:\диплом\bikestore\BikeStore\BikeStore\bin\BikeStore.dll.config
+D:\диплом\bikestore\BikeStore\BikeStore\bin\BikeStore.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\BikeStore.pdb
+D:\диплом\bikestore\BikeStore\BikeStore\bin\EntityFramework.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\EntityFramework.SqlServer.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.Agent.Intercept.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.DependencyCollector.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.Web.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.WindowsServer.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.ApplicationInsights.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.Web.Infrastructure.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\System.Web.Helpers.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\System.Web.Mvc.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\System.Web.Razor.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\System.Web.Webpages.Deployment.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\System.Web.Webpages.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\System.Web.Webpages.Razor.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\EntityFramework.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\EntityFramework.SqlServer.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.DependencyCollector.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.Web.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.AI.WindowsServer.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.ApplicationInsights.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\System.Web.Razor.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\System.Web.Webpages.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\System.Web.Webpages.Deployment.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\System.Web.Webpages.Razor.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\System.Web.Helpers.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\System.Web.Mvc.xml
+D:\диплом\bikestore\BikeStore\BikeStore\bin\ru\System.Web.Razor.resources.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\ru\System.Web.Webpages.resources.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\ru\System.Web.Webpages.Deployment.resources.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\ru\System.Web.Webpages.Razor.resources.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\ru\System.Web.Helpers.resources.dll
+D:\диплом\bikestore\BikeStore\BikeStore\bin\ru\System.Web.Mvc.resources.dll
+D:\диплом\bikestore\BikeStore\BikeStore\obj\Release\BikeStore.csprojAssemblyReference.cache
+D:\диплом\bikestore\BikeStore\BikeStore\obj\Release\BikeStore.csproj.CoreCompileInputs.cache
+D:\диплом\bikestore\BikeStore\BikeStore\obj\Release\BikeStore.csproj.CopyComplete
+D:\диплом\bikestore\BikeStore\BikeStore\obj\Release\BikeStore.dll
+D:\диплом\bikestore\BikeStore\BikeStore\obj\Release\BikeStore.pdb
+D:\BikeStore\BikeStore\bin\ApplicationInsights.config
+D:\BikeStore\BikeStore\bin\roslyn\csc.exe
+D:\BikeStore\BikeStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\BikeStore\BikeStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\BikeStore\BikeStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\BikeStore\BikeStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\BikeStore\BikeStore\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\BikeStore\BikeStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\BikeStore\BikeStore\bin\roslyn\System.Collections.Immutable.dll
+D:\BikeStore\BikeStore\bin\roslyn\System.Reflection.Metadata.dll
+D:\BikeStore\BikeStore\bin\roslyn\vbc.exe
+D:\BikeStore\BikeStore\bin\roslyn\VBCSCompiler.exe
+D:\BikeStore\BikeStore\bin\roslyn\VBCSCompiler.exe.config
+D:\BikeStore\BikeStore\bin\BikeStore.dll.config
+D:\BikeStore\BikeStore\bin\BikeStore.dll
+D:\BikeStore\BikeStore\bin\BikeStore.pdb
+D:\BikeStore\BikeStore\bin\EntityFramework.dll
+D:\BikeStore\BikeStore\bin\EntityFramework.SqlServer.dll
+D:\BikeStore\BikeStore\bin\Microsoft.AI.Agent.Intercept.dll
+D:\BikeStore\BikeStore\bin\Microsoft.AI.DependencyCollector.dll
+D:\BikeStore\BikeStore\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\BikeStore\BikeStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\BikeStore\BikeStore\bin\Microsoft.AI.Web.dll
+D:\BikeStore\BikeStore\bin\Microsoft.AI.WindowsServer.dll
+D:\BikeStore\BikeStore\bin\Microsoft.ApplicationInsights.dll
+D:\BikeStore\BikeStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\BikeStore\BikeStore\bin\Microsoft.Web.Infrastructure.dll
+D:\BikeStore\BikeStore\bin\System.Web.Helpers.dll
+D:\BikeStore\BikeStore\bin\System.Web.Mvc.dll
+D:\BikeStore\BikeStore\bin\System.Web.Razor.dll
+D:\BikeStore\BikeStore\bin\System.Web.Webpages.Deployment.dll
+D:\BikeStore\BikeStore\bin\System.Web.Webpages.dll
+D:\BikeStore\BikeStore\bin\System.Web.Webpages.Razor.dll
+D:\BikeStore\BikeStore\bin\EntityFramework.xml
+D:\BikeStore\BikeStore\bin\EntityFramework.SqlServer.xml
+D:\BikeStore\BikeStore\bin\Microsoft.AI.DependencyCollector.xml
+D:\BikeStore\BikeStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\BikeStore\BikeStore\bin\Microsoft.AI.Web.xml
+D:\BikeStore\BikeStore\bin\Microsoft.AI.WindowsServer.xml
+D:\BikeStore\BikeStore\bin\Microsoft.ApplicationInsights.xml
+D:\BikeStore\BikeStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\BikeStore\BikeStore\bin\System.Web.Razor.xml
+D:\BikeStore\BikeStore\bin\System.Web.Webpages.xml
+D:\BikeStore\BikeStore\bin\System.Web.Webpages.Deployment.xml
+D:\BikeStore\BikeStore\bin\System.Web.Webpages.Razor.xml
+D:\BikeStore\BikeStore\bin\System.Web.Helpers.xml
+D:\BikeStore\BikeStore\bin\System.Web.Mvc.xml
+D:\BikeStore\BikeStore\bin\ru\System.Web.Razor.resources.dll
+D:\BikeStore\BikeStore\bin\ru\System.Web.Webpages.resources.dll
+D:\BikeStore\BikeStore\bin\ru\System.Web.Webpages.Deployment.resources.dll
+D:\BikeStore\BikeStore\bin\ru\System.Web.Webpages.Razor.resources.dll
+D:\BikeStore\BikeStore\bin\ru\System.Web.Helpers.resources.dll
+D:\BikeStore\BikeStore\bin\ru\System.Web.Mvc.resources.dll
+D:\BikeStore\BikeStore\obj\Release\BikeStore.csprojAssemblyReference.cache
+D:\BikeStore\BikeStore\obj\Release\BikeStore.csproj.CopyComplete
+D:\BikeStore\BikeStore\obj\Release\BikeStore.dll
+D:\BikeStore\BikeStore\obj\Release\BikeStore.pdb

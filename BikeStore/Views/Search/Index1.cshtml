@@ -1,0 +1,32 @@
+﻿@model  IEnumerable<BikeStore.Models.Bikes>
+
+@{
+    ViewData["Title"] = "Index1";
+}
+
+<h2>Index1</h2>
+
+<form asp-controller="searchString" asp-action="Index1">
+    <p>
+      
+        Title: <input type="text" name="searchString">
+        <input type="submit" value="submit" />
+    </p>
+</form>
+
+        <table>
+            <tr>
+                <th>Manufacturer</th>
+                <th>Type</th>
+            </tr>
+
+
+            @foreach (var Item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => Item.Manufacturer)</td>
+                    <td>@Html.DisplayFor(modelItem => Item.Type)</td>
+                </tr>
+            }
+        </table>
+ 

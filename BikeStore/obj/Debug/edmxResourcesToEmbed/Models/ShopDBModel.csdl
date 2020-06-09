@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bikes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Manufacturer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Preview" Type="String" MaxLength="350" Unicode="true" FixedLength="false" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Transmission" Type="Double" Nullable="true" />
+    <Property Name="Price" Type="Double" Nullable="true" />
+    <NavigationProperty Name="Bikes_Orders" Relationship="DatabaseShopModel.fk_bikes" FromRole="Bikes" ToRole="Bikes_Orders" />
+    <Property Name="Wheels" Type="Double" Nullable="true" />
+    <Property Name="Weight" Type="Double" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Adress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Bikes_Orders" Relationship="DatabaseShopModel.fk_orders" FromRole="Orders" ToRole="Bikes_Orders" />
+  </EntityType>
+  <EntityContainer Name="DatabaseShopEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bikes" EntityType="Self.Bikes" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" />
+    <EntitySet Name="Bikes_Orders" EntityType="DatabaseShopModel.Bikes_Orders" />
+    <AssociationSet Name="fk_bikes" Association="DatabaseShopModel.fk_bikes">
+      <End Role="Bikes" EntitySet="Bikes" />
+      <End Role="Bikes_Orders" EntitySet="Bikes_Orders" />
+    </AssociationSet>
+    <AssociationSet Name="fk_orders" Association="DatabaseShopModel.fk_orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="Bikes_Orders" EntitySet="Bikes_Orders" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Bikes_Orders">
+    <Key>
+      <PropertyRef Name="BikeId" />
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="BikeId" Type="Int32" Nullable="false" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bikes" Relationship="DatabaseShopModel.fk_bikes" FromRole="Bikes_Orders" ToRole="Bikes" />
+    <NavigationProperty Name="Orders" Relationship="DatabaseShopModel.fk_orders" FromRole="Bikes_Orders" ToRole="Orders" />
+  </EntityType>
+  <Association Name="fk_bikes">
+    <End Type="DatabaseShopModel.Bikes" Role="Bikes" Multiplicity="1" />
+    <End Type="DatabaseShopModel.Bikes_Orders" Role="Bikes_Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bikes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bikes_Orders">
+        <PropertyRef Name="BikeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_orders">
+    <End Type="DatabaseShopModel.Orders" Role="Orders" Multiplicity="1" />
+    <End Type="DatabaseShopModel.Bikes_Orders" Role="Bikes_Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bikes_Orders">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище DatabaseShopModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bikes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="text" />
+          <Property Name="Preview" Type="nvarchar" MaxLength="350" />
+          <Property Name="Year" Type="int" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Transmission" Type="float" />
+          <Property Name="Wheels" Type="float" />
+          <Property Name="Weight" Type="float" />
+        </EntityType>
+        <EntityType Name="Bikes_Orders">
+          <Key>
+            <PropertyRef Name="BikeId" />
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="BikeId" Type="int" Nullable="false" />
+          <Property Name="OrderId" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adress" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="fk_bikes">
+          <End Role="Bikes" Type="Self.Bikes" Multiplicity="1" />
+          <End Role="Bikes_Orders" Type="Self.Bikes_Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bikes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Bikes_Orders">
+              <PropertyRef Name="BikeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_orders">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="Bikes_Orders" Type="Self.Bikes_Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Bikes_Orders">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище DatabaseShopModelContainer">
+          <EntitySet Name="Bikes" EntityType="Self.Bikes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bikes_Orders" EntityType="Self.Bikes_Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_bikes" Association="Self.fk_bikes">
+            <End Role="Bikes" EntitySet="Bikes" />
+            <End Role="Bikes_Orders" EntitySet="Bikes_Orders" />
+          </AssociationSet>
+          <AssociationSet Name="fk_orders" Association="Self.fk_orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="Bikes_Orders" EntitySet="Bikes_Orders" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DatabaseShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bikes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Manufacturer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Preview" Type="String" MaxLength="350" Unicode="true" FixedLength="false" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="Transmission" Type="Double" Nullable="true" />
+          <Property Name="Price" Type="Double" Nullable="true" />
+          <NavigationProperty Name="Bikes_Orders" Relationship="DatabaseShopModel.fk_bikes" FromRole="Bikes" ToRole="Bikes_Orders" />
+          <Property Name="Wheels" Type="Double" Nullable="true" />
+          <Property Name="Weight" Type="Double" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Bikes_Orders" Relationship="DatabaseShopModel.fk_orders" FromRole="Orders" ToRole="Bikes_Orders" />
+        </EntityType>
+        <EntityContainer Name="DatabaseShopEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bikes" EntityType="Self.Bikes" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" />
+          <EntitySet Name="Bikes_Orders" EntityType="DatabaseShopModel.Bikes_Orders" />
+          <AssociationSet Name="fk_bikes" Association="DatabaseShopModel.fk_bikes">
+            <End Role="Bikes" EntitySet="Bikes" />
+            <End Role="Bikes_Orders" EntitySet="Bikes_Orders" />
+          </AssociationSet>
+          <AssociationSet Name="fk_orders" Association="DatabaseShopModel.fk_orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="Bikes_Orders" EntitySet="Bikes_Orders" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Bikes_Orders">
+          <Key>
+            <PropertyRef Name="BikeId" />
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="BikeId" Type="Int32" Nullable="false" />
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Bikes" Relationship="DatabaseShopModel.fk_bikes" FromRole="Bikes_Orders" ToRole="Bikes" />
+          <NavigationProperty Name="Orders" Relationship="DatabaseShopModel.fk_orders" FromRole="Bikes_Orders" ToRole="Orders" />
+        </EntityType>
+        <Association Name="fk_bikes">
+          <End Type="DatabaseShopModel.Bikes" Role="Bikes" Multiplicity="1" />
+          <End Type="DatabaseShopModel.Bikes_Orders" Role="Bikes_Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bikes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Bikes_Orders">
+              <PropertyRef Name="BikeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_orders">
+          <End Type="DatabaseShopModel.Orders" Role="Orders" Multiplicity="1" />
+          <End Type="DatabaseShopModel.Bikes_Orders" Role="Bikes_Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Bikes_Orders">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище DatabaseShopModelContainer" CdmEntityContainer="DatabaseShopEntities1">
+          <EntitySetMapping Name="Bikes">
+            <EntityTypeMapping TypeName="DatabaseShopModel.Bikes">
+              <MappingFragment StoreEntitySet="Bikes">
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Wheels" ColumnName="Wheels" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Preview" ColumnName="Preview" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="DatabaseShopModel.Orders">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bikes_Orders">
+            <EntityTypeMapping TypeName="DatabaseShopModel.Bikes_Orders">
+              <MappingFragment StoreEntitySet="Bikes_Orders">
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="BikeId" ColumnName="BikeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

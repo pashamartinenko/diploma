@@ -1,0 +1,61 @@
+﻿@model BikeStore.Models.Orders
+
+@{
+    ViewBag.Title = "OrderView";
+    //Layout = "~/Views/MasterView.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<body class="page">
+    <!--BEGIN CONTENT-->
+
+    <div id="content">
+        <br/>
+            <div class="container text-center">
+                <div class="main-content text-center">
+                    <div class="page-title">
+                        <h3>ОФОРМЛЕНИЕ ЗАКАЗА</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 text-center"></div>
+                        <div class="col-sm-4 text-center">
+                            <div class="form-checkout">
+                                <h5 class="form-title">Введите ваши данные</h5>
+                                @using (Html.BeginForm("Save", "Cart"))
+                                {
+                                    <div class="panel-body">
+                                        @foreach (var order in ViewData.ModelMetadata.Properties)
+                                        {
+                                            if (order.PropertyName != "Id" && order.PropertyName != "Bikes_Orders")
+                                            {
+                                                <div class="form-group">
+                                                    <label>@(order.DisplayName ?? order.PropertyName)</label>
+                                                    @Html.TextBox(order.PropertyName, null, new { @class = " form-control" })
+                                                </div>
+
+                                            }                                                                                                                             
+                                        }
+                                    </div>
+                                    <div class="panel-footer">
+
+                                        <input type="submit" value="Заказать" class="btn btn-primary" />
+
+                                        @Html.ActionLink("Назад", "Index", null, new { @class = "bnt bnt-default" })
+
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    <!--EOF CONTENT-->
+
+</body>
+</html>
+

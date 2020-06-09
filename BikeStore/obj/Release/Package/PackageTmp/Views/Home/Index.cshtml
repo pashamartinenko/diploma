@@ -1,0 +1,225 @@
+﻿@model   IEnumerable<BikeStore.Models.Bikes>
+@{ 
+    Layout = "/Views/MasterView.cshtml";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<body class="page">
+
+    <!--BEGIN CONTENT-->
+    <div id="content">
+        <div class="bg_navigation">
+            <div class="navigation_wrapper">
+                <div id="navigation">
+                    <span>Home</span>
+                    <ul>
+                        <li class="current"><a href="#">Главная</a></li>
+                        
+                        <li><a href="@Url.Action("Contact","Home")">Контакты</a></li>
+                        <li><a href="@Url.Action("Catalog","Home")">Каталог</a></li>
+                    </ul>
+                </div>
+                @*<div id="login_form">
+                    <form method="get" action="#">
+                        <input type="submit" value="Login in" class="btn_login" />
+                    </form>
+                </div>*@
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div class="wrapper_1">
+                <div class="slider_wrapper">
+                    <div class="home_slider">
+                        <div class="slider slider_1">
+                            <div class="slide">
+                                <img src="~/Content/images/bikes/krosslvl11.jpeg" alt="" />
+                                <div class="description">
+                                    <h2 class="title">Kross Level 11</h2>
+                                    <p class="desc"><span><strong>Год выпуска: </strong>2018</span><span><strong>Трансмиссия: </strong>22</span></p>
+                                    <div class="price">$ 2000</div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="~/Content/images/bikes/GT Avalanche Comp.jpeg" alt="" />
+                                <div class="description">
+                                    <h2 class="title">GT Karakaram Comp</h2>
+                                    <p class="desc"><span><strong>Год выпуска: </strong>2015</span><span><strong>Трансмиссия: </strong>27</span></p>
+                                    <div class="price">$ 600</div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="~/Content/images/bikes/Stels Navigator 890 D Carbon.jpg" alt="" />
+                                <div class="description">
+                                    <h2 class="title">Stels Navigator 890 D Carbon</h2>
+                                    <p class="desc"><span><strong>Год выпуска: </strong>2016</span><span><strong>Трансмиссия: </strong>30</span></p>
+                                    <div class="price">$ 1100</div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                            
+                                <img src="~/Content/images/bikes/LTD Gravity 990 29.jpeg" alt="" />
+                                <div class="description">
+                                    <h2 class="title">LTD Gravity 990 (29)</h2>
+                                    <p class="desc"><span><strong>Год выпуска: </strong>2018</span><span><strong>Трансмиссия: </strong>20</span></p>
+                                    <div class="price">$ 500</div>
+                                </div>
+                            </div>
+                            <div class="slide">      
+                                                       
+                                <img src="~/Content/images/bikes/Cube Reaction GTC Race 27.5.jpeg" alt="" /> 
+                                <div class="description">
+                                    <h2 class="title">Cube Reaction GTC Race 27.5</h2>
+                                    <p class="desc"><span><strong>Год выпуска: </strong>2017</span><span><strong>Трансмиссия: </strong>22</span></p>
+                                    <div class="price">$ 2000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_auto_wrapper">
+                    @*<div class="search_auto">
+                        <h3><strong>Search</strong> bicycle</h3>
+
+                        <div class="clear"></div>
+                        <label><strong>Manufacturer:</strong></label>
+                        <div class="select_box_1">
+                            <select class="select_1">
+                                <option value="0">Any</option>
+                                <option value="1">Kross</option>
+                                <option value="2">Cube</option>
+                                <option value="3">Merida</option>
+                                <option value="4">GT</option>
+                                <option value="5">LTD</option>
+                                <option value="6">Stels</option>
+                                <option value="7">Format</option>
+                                <option value="8">Trek</option>
+                            </select>
+                        </div>
+                        <label><strong>Type:</strong></label>
+                        <div class="select_box_1">
+                            <select class="select_1">
+                                <option value="0">Any</option>
+                                <option value="1">Cross-country</option>
+                                <option value="2">Highway</option>
+                                <option value="3">Fat bike</option>
+                                <option value="4">Urban</option>
+                                <option value="5">BMX</option>
+                                <option value="6">Trial/Freestyle</option>
+                                <option value="7">Downhill</option>
+                                <option value="8">Cyclocross</option>
+                            </select>
+                        </div>
+                        <label><strong>Year:</strong></label>
+                        <div class="select_box_2">
+                            <select class="select_2">
+                                <option value="0">From</option>
+                                <option value="1">2018</option>
+                                <option value="2">2017</option>
+                                <option value="3">2016</option>
+                                <option value="4">2015</option>
+                                <option value="5">2014</option>
+                                <option value="6">2013</option>
+                                <option value="7">2012</option>
+                                <option value="8">2011</option>
+                            </select>
+                            <select class="select_2">
+                                <option value="0">To</option>
+                                <option value="1">2018</option>
+                                <option value="2">2017</option>
+                                <option value="3">2016</option>
+                                <option value="4">2015</option>
+                                <option value="5">2014</option>
+                                <option value="6">2013</option>
+                                <option value="7">2012</option>
+                                <option value="8">2011</option>
+                            </select>
+                            <div class="clear"></div>
+                        </div>
+                        <label><strong>Price:</strong></label>
+                        <div class="select_box_2">
+                            <select class="select_2">
+                                <option value="0">From</option>
+                                <option value="1">100</option>
+                                <option value="2">200</option>
+                                <option value="3">300</option>
+                                <option value="4">400</option>
+                                <option value="5">500</option>
+                                <option value="6">1000</option>
+                                <option value="7">1500</option>
+                                <option value="8">2000</option>
+                            </select>
+                            <select class="select_2">
+                                <option value="0">To</option>
+                                <option value="1">100</option>
+                                <option value="2">200</option>
+                                <option value="3">300</option>
+                                <option value="4">400</option>
+                                <option value="5">500</option>
+                                <option value="6">1000</option>
+                                <option value="7">1500</option>
+                                <option value="8">2000</option>
+                            </select>
+                            <div class="clear"></div>
+                        </div>
+                        <label><strong>Transmission:</strong></label>
+                        <div class="select_box_2">
+                            <select class="select_2">
+                                <option value="0">From</option>
+                                <option value="1">14</option>
+                                <option value="2">16</option>
+                                <option value="3">18</option>
+                                <option value="4">20</option>
+                                <option value="5">22</option>
+                                <option value="6">24</option>
+                                <option value="7">27</option>
+                                <option value="8">30</option>
+                            </select>
+                            <select class="select_2">
+                                <option value="0">To</option>
+                                <option value="1">14</option>
+                                <option value="2">16</option>
+                                <option value="3">18</option>
+                                <option value="4">20</option>
+                                <option value="5">22</option>
+                                <option value="6">24</option>
+                                <option value="7">27</option>
+                                <option value="8">30</option>
+                            </select>
+                            <div class="clear"></div>
+                        </div>
+
+                    <input type="submit" value="Search" class="btn_search" />
+                        <div class="clear"></div>
+                    </div>*@
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="recent">
+                <h2><strong>Последние</strong> объявления</h2>
+                <div class="recent_carousel">
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="slide">
+                            <a href="@Url.Action("BikePage","Home", new {item_id=item.Id})">
+                                <img src="@item.Preview" alt="@item.Manufacturer" />
+                                <div class="description">Тип: @item.Type<br />Год выпуска: @item.Year<br />Трансмиссия: @item.Transmission</div>
+                                <div class="title">@item.Manufacturer <span class="price">@item.Price $</span></div>
+                            </a>
+                        </div>
+                    }                
+                    
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--EOF CONTENT-->
+   
+</body>
+</html>

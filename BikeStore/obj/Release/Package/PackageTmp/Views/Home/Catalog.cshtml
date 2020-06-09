@@ -1,0 +1,229 @@
+﻿@model IEnumerable<BikeStore.Models.Bikes>
+@{
+    Layout = "/Views/MasterView.cshtml";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<body class="page">
+
+    <!--BEGIN CONTENT-->
+    <div id="content">
+
+        <div class="bg_navigation">
+            <div class="navigation_wrapper">
+                <div id="navigation">
+                    <span>Home</span>
+                    <ul>
+                        <li ><a href="@Url.Action("Index","Home")">Home</a></li> 
+
+
+                        <li><a href="@Url.Action("Contact","Home")">Contacts</a></li>
+                        <li class="current"><a href="#">Catalog</a> </li>
+                    </ul>
+                </div>
+                <div id="login_form">
+                    <form method="get" action="#">
+                        <input type="submit" value="Login in" class="btn_login" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="breadcrumbs">
+                <a href="@Url.Action("Index","Home")">Home</a>
+                <img src="~/Content/images/marker_2.gif" alt="" />
+                <span>Catalog</span>
+            </div>
+            <div class="main_wrapper">
+
+                <h1><strong>Bikes</strong> results</h1>
+                <div class="catalog_sidebar">
+                    <div class="search_auto">
+                        <h3><strong>Search</strong> bicycle</h3>
+
+                        <div class="clear"></div>
+
+                        <div class="select_box_1">
+                            <label><strong>Производитель:</strong></label>
+
+
+
+                            @*@using (Html.BeginForm())
+                {
+
+                            <input type="text" name="searchString">
+
+                            <label><strong>Type:</strong></label>
+
+                            @Html.DropDownList("bikeType", "All")
+
+
+                            <input type="submit" value="Search" class="btn_search" />
+
+                }*@
+
+
+
+
+                            @*<form asp-controller="searchString" asp-action="Catalog">
+                                <p>
+                                    <input type="text" name="searchString">
+
+
+                                    <label><strong>Type:</strong></label>
+
+                                    @Html.DropDownList("bikeType", "All")
+
+
+                                    <input type="submit" value="Search" class="btn_search" />
+                                </p>
+                            </form>*@
+
+                        </div>
+
+                        <form action="@Url.Action("Catalog","Home")" method="post">
+                            <div class="select_box_1">
+                                <select class="select_1" name="Manufacturer">
+                                    <option value="">Выберите марку</option>
+                                    <option value="Kross">Kross</option>
+                                    <option value="Cube">Cube</option>
+                                    <option value="Merida">Merida</option>
+                                    <option value="GT">GT</option>
+                                    <option value="LTD">LTD</option>
+                                    <option value="Stels">Stels</option>
+                                    <option value="Format">Format</option>
+                                    <option value="Trek">Trek</option>
+                                </select>
+                                <div class="clear"></div>
+                            </div>
+
+                            <label><strong>Тип:</strong></label>
+                            <div class="select_box_1">
+                                <select class="select_1" name="Type">
+                                    <option value="">Выберите тип</option>
+                                    <option value="Cross-country">Cross-country</option>
+                                    <option value="Highway">Highway</option>
+                                    <option value="Fat bike">Fat bike</option>
+                                    <option value="Urban">Urban</option>
+                                    <option value="BMX">BMX</option>
+                                    <option value="Trial/Freestyle">Trial/Freestyle</option>
+                                    <option value="Downhill">Downhill</option>
+                                    <option value="Cyclocross">Cyclocross</option>
+                                </select>
+                                <div class="clear"></div>
+                            </div>
+
+
+                            <label><strong>Год выпуска:</strong></label>
+                            <div class="select_box_1">
+                                <select class="select_1" name="Year">
+                                    <option value="">Выберите год</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                </select>
+                            
+                                <div class="clear"></div>
+                            </div>
+                            <label><strong>Цена:</strong></label>
+                            <div class="select_box_1" >
+                               
+                                <select class="select_1" name="Price">
+                                    <option value="">Выберите цену</option>
+                                    <option value="2000">2000$</option>
+                                    <option value="1500">1500$</option>
+                                    <option value="1300">1300$</option>
+                                    <option value="1100">1100$</option>
+                                    <option value="1000">1000$</option>
+                                    <option value="700">700$</option>
+                                    <option value="600">600$</option>
+                                    <option value="500">500$</option>
+                                    <option value="300">300$</option>
+                               </select>
+                                <div class="clear"></div>
+                            </div>
+                            <label><strong>Трансмиссия:</strong></label>
+                            <div class="select_box_1">
+                                <select class="select_1" name="Transmission">
+                                    <option value="">Выберите трансмиссию</option>
+                                    <option value="Mono">1</option>
+                                    <option value="11">11</option>
+                                    <option value="14">14</option>
+                                    <option value="16">16</option>
+                                    <option value="18">18</option>
+                                    <option value="20">20</option>
+                                    <option value="22">22</option>
+                                    <option value="24">24</option>
+                                    <option value="27">27</option>
+                                    <option value="30">30</option>
+                                </select>
+                               
+                                <div class="clear"></div>
+                            </div>
+                                <input type="submit" value="Search" class="btn_search" />
+                </form>
+                       </div>
+                    </div>
+                </div>
+
+                <div class="main_catalog">                
+                    <ul class="catalog_table">                   
+
+                        @foreach (var item in Model)
+                        {
+                            <li>
+                                @*<a href="@Url.Action("BikePage","Home", new {item_id=item.Id})">*@
+                                    <a href="@Url.Action("BikePage","Home", new {item_id=item.Id})" class="thumb"><img src="@item.Preview" alt="" wight="100" height="100" /></a>
+                                    <div class="catalog_desc">
+                                        <div class="title_box">
+                                            <h4><a href="@Url.Action("BikePage","Home", new {item_id=item.Id})">@item.Manufacturer</a></h4>
+                                            <div class="price">@item.Price $</div>
+                                        </div>                                   
+                                        <div class="clear"></div>
+                                        <div class="grey_area">
+                                        <span>@item.Description</span>
+                                        </div>
+                                    </div>
+                            </li>
+                            }
+
+
+                       @*<li>
+                            <a href="#" class="thumb"><img src="~/Content/images/placeholders/165x119.gif" alt="" /></a>
+                            <div class="catalog_desc">
+                                <div class="location">Location: Berlin, Germany</div>
+                                <div class="title_box">
+                                    <h4><a href="#">Mercedes-Benz CLS</a></h4>
+                                    <div class="price">54980 EURO</div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="grey_area">
+                                    <span>Registration 2002</span>
+                                    <span>3.0 Diesel</span>
+                                    <span>230 HP</span>
+                                    <span>Body Coupe</span>
+                                    <span>80 000 Miles</span>
+                                </div>
+                                <a href="#" class="more markered">View details</a>
+                            </div>
+                        </li>*@
+                    </ul>              
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!--EOF CONTENT-->
+
+</body>
+</html>
+
